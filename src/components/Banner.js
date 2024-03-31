@@ -9,9 +9,16 @@ import {
   DescriptionText,
 } from "./banner.style";
 import { Image } from "react-native";
-import home from "../../assets/home.jpg"
+import home from "../../assets/home.jpg";
+import { useNavigation } from "@react-navigation/native";
 
 export const Banner = () => {
+  const navigation = useNavigation();
+
+  const handleNavigation = (screenName) => {
+    navigation.navigate(screenName);
+  };
+
   const screenHeight = Dimensions.get("window").height;
   const imageWidth = screenHeight * 0.7;
   return (
@@ -28,10 +35,10 @@ export const Banner = () => {
         attendance management.
       </DescriptionText> */}
       <ButtonContainer>
-        <CustomButton onPress={() => console.log("Button pressed")}>
+        <CustomButton onPress={() => handleNavigation("Signup")}>
           <ButtonText>Sign Up</ButtonText>
         </CustomButton>
-        <CustomButton onPress={() => console.log("Button pressed")}>
+        <CustomButton onPress={() => handleNavigation("Login")}>
           <ButtonText>Log In</ButtonText>
         </CustomButton>
       </ButtonContainer>
