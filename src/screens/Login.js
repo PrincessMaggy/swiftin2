@@ -1,12 +1,13 @@
 import React from "react";
-import {  Text } from "react-native";
+import { Text } from "react-native";
 import { SafeAreaRender } from "../utils/SafeAreaRender";
+import { TopBanner } from "../components/TopBanner";
 
 export const Login = () => {
-    
-    return (
-      <SafeAreaRender>
-        <Text>Text</Text>
-      </SafeAreaRender>
-    );
-}
+  return (
+    <SafeAreaRender>
+      <TopBanner />
+      <Text>Text</Text>
+    </SafeAreaRender>
+  );
+};
