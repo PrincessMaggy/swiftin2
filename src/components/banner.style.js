@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 import { Text, View, TouchableOpacity } from "react-native";
 
 export const LogoContainer = styled(View)`
-  background-color: #3442C0;
+  background-color: #3442c0;
   width: auto;
 `;
 
@@ -13,7 +13,7 @@ export const Logo = styled(Text)`
   text-align: center;
   letter-spacing: 2px;
   padding: 10px;
-  background-color: #3442C0;
+  background-color: #3442c0;
 `;
 
 export const CustomButton = styled(TouchableOpacity)`
@@ -39,12 +39,11 @@ export const ButtonContainer = styled(View)`
   padding: 10px;
 `;
 
-
 export const DescriptionText = styled.Text`
   position: absolute;
-  color:white;
-  font-size:20px;
-  top:40%;
+  color: white;
+  font-size: 20px;
+  top: 40%;
   text-align: center;
-  padding: 10px
+  padding: 10px;
 `;

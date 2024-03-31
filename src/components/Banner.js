@@ -9,7 +9,7 @@ import {
   DescriptionText,
 } from "./banner.style";
 import { Image } from "react-native";
-import home from "../assets/home.jpg";
+import home from "../../assets/home.jpg"
 
 export const Banner = () => {
   const screenHeight = Dimensions.get("window").height;
