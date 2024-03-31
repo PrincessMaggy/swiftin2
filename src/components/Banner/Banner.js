@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Dimensions,  } from "react-native";
+import { Text, View, Dimensions } from "react-native";
 import {
   CustomButton,
   ButtonText,
@@ -8,9 +8,9 @@ import {
   DescriptionContainer,
 } from "./banner.style";
 import { Image } from "react-native";
-import home from "../../assets/home.jpg";
+import home from '../../../assets/home.jpg'
 import { useNavigation } from "@react-navigation/native";
-import { TopBanner } from "./TopBanner";
+import { TopBanner } from "../TopBanner";
 
 export const Banner = () => {
   const navigation = useNavigation();
@@ -19,12 +19,11 @@ export const Banner = () => {
     navigation.navigate(screenName);
   };
 
-
   const screenHeight = Dimensions.get("window").height;
   const imageWidth = screenHeight * 0.7;
   return (
     <View>
-     <TopBanner/>
+      <TopBanner />
       <Image
         source={home}
         style={{ width: imageWidth, height: screenHeight - 250, opacity: 0.9 }}

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, TouchableOpacity } from "react-native";
-import { LogoContainer, Logo } from "./banner.style";
+import { LogoContainer, Logo } from "./Banner/banner.style";
 import { useNavigation } from "@react-navigation/native";
 
 export const TopBanner = () => {
