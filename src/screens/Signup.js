@@ -1,6 +1,11 @@
 import React from "react";
-import { Text } from "react-native";
+import {  Text } from "react-native";
+import { SafeAreaRender } from "../utils/SafeAreaRender";
 
 export const Signup = () => {
-  return <Text>Signup</Text>;
+  return (
+    <SafeAreaRender>
+      <Text>Signup</Text>
+    </SafeAreaRender>
+  );
 };

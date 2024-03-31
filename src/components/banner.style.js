@@ -39,11 +39,15 @@ export const ButtonContainer = styled(View)`
   padding: 10px;
 `;
 
-export const DescriptionText = styled.Text`
+export const DescriptionContainer = styled(View)`
   position: absolute;
-  color: white;
-  font-size: 20px;
   top: 40%;
+  width: 100%;
+  padding:10px
+`;
+
+export const DescriptionText = styled.Text`
+  color: white;
+  font-size: 25px;
   text-align: center;
-  padding: 10px;
 `;

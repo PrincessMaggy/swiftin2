@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Dimensions, Button } from "react-native";
+import { Text, View, Dimensions, TouchableOpacity } from "react-native";
 import {
   Logo,
   CustomButton,
@@ -7,6 +7,7 @@ import {
   ButtonContainer,
   LogoContainer,
   DescriptionText,
+  DescriptionContainer,
 } from "./banner.style";
 import { Image } from "react-native";
 import home from "../../assets/home.jpg";
@@ -19,21 +20,29 @@ export const Banner = () => {
     navigation.navigate(screenName);
   };
 
+  const navigateToHome = () => {
+    navigation.navigate("Homepage");
+  };
+
   const screenHeight = Dimensions.get("window").height;
   const imageWidth = screenHeight * 0.7;
   return (
     <View>
-      <LogoContainer>
-        <Logo>SwiftIn</Logo>
-      </LogoContainer>
+      <TouchableOpacity onPress={navigateToHome}>
+        <LogoContainer>
+          <Logo>SwiftIn</Logo>
+        </LogoContainer>
+      </TouchableOpacity>
       <Image
         source={home}
-        style={{ width: imageWidth, height: screenHeight - 300 }}
+        style={{ width: imageWidth, height: screenHeight - 250, opacity: 0.9 }}
       />
-      {/* <DescriptionText>
-        SwiftIn is a streamlined mobile application designed to simplify event
-        attendance management.
-      </DescriptionText> */}
+      {/* <DescriptionContainer>
+        <DescriptionText style={{ textAlign: "center" }}>
+          SwiftIn is a streamlined mobile application designed to simplify event
+          attendance management.
+        </DescriptionText>
+      </DescriptionContainer> */}
       <ButtonContainer>
         <CustomButton onPress={() => handleNavigation("Signup")}>
           <ButtonText>Sign Up</ButtonText>
