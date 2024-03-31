@@ -7,8 +7,8 @@ import {
   DescriptionText,
   DescriptionContainer,
 } from "./banner.style";
-import { Image } from "react-native";
-import home from '../../../assets/home.jpg'
+import { Image, Linking } from "react-native";
+import home from "../../../assets/home.jpg";
 import { useNavigation } from "@react-navigation/native";
 import { TopBanner } from "../TopBanner";
 
@@ -17,6 +17,18 @@ export const Banner = () => {
 
   const handleNavigation = (screenName) => {
     navigation.navigate(screenName);
+  };
+  const handleOpenURL = async (url) => {
+    try {
+      const supported = await Linking.canOpenURL(url);
+      if (supported) {
+        await Linking.openURL(url);
+      } else {
+        console.error("Cannot open URI: " + url);
+      }
+    } catch (error) {
+      console.error("Error opening URI: " + error);
+    }
   };
 
   const screenHeight = Dimensions.get("window").height;
@@ -35,7 +47,7 @@ export const Banner = () => {
         </DescriptionText>
       </DescriptionContainer> */}
       <ButtonContainer>
-        <CustomButton onPress={() => handleNavigation("Signup")}>
+        <CustomButton onPress={() => handleOpenURL("https://www.google.com")}>
           <ButtonText>Sign Up</ButtonText>
         </CustomButton>
         <CustomButton onPress={() => handleNavigation("Login")}>

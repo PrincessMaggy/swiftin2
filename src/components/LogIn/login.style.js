@@ -10,8 +10,8 @@ export const FormContain = styled.View`
 export const InfoText = styled(Text)`
   color: red;
   font-size: 15px;
-  text-align:center;
-  padding:30px
+  text-align: center;
+  padding: 30px;
 `;
 
 export const LoginLabel = styled.Text`
